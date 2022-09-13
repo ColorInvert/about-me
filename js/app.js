@@ -88,3 +88,4 @@ else {
   alert('That is, oddly enough, incorrect! While Casey considers themselves the "main person" within their body, smaller other personalities sometimes chime in to provide secondary opinions. These others have their own creeds and opinions, and even preferred names, seperate from Casey\'s. Brains are wild.');
 }
 
+alert('Thank you for playing along, ' + visitorName + '. Maybe you feel that you understand me just that little bit better.');
