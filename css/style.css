@@ -9,10 +9,36 @@ enby black #2C2C2C
 */
 
 
-
+header {
+  font-family: sans-serif;
+  background-color: #9C59D1;
+  color: #FCF434;
+  border: 15px solid  #2C2C2C;
+  text-shadow: 4px 4px 2px #2C2C2C;
+  font-size: 40pt;
+  text-align: center;
+  padding:15px;
+}
 
 body {
   font-family: sans-serif;
-  background-color: #55cdfc
+  background-color: #FFFFFF
 
+}
+h1 {
+  font-size: 20pt;
+  background-color: #55cdfc;
+  border-radius: 10px;
+  border: 15px  #55cdfc;
+  margin: 15px;
+  padding:15px;
+
+}
+h2 {
+  font-size: 15pt;
+  background-color: #f7a8b8;
+  border-radius: 10px;
+  border: 15px  #55cdfc;
+  margin: 15px;
+  padding:15px;
 }
