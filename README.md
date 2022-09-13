@@ -2,7 +2,11 @@
 Code 201 projects.
 
 ## Lab 2
+Requested TA help for how to properly format consecutive variable transformations. Example was 
+resp1.toUpperCase().charAt(0) === 'Y'{
 
+}
+How to properly format to both do toUpperCase and charAt to resp1 was the part in question.
 ## Lab 3
 
 ## Lab 4
