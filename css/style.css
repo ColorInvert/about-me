@@ -13,32 +13,75 @@ header {
   font-family: sans-serif;
   background-color: #9C59D1;
   color: #FCF434;
-  border: 15px solid  #2C2C2C;
+  border: 15px solid #2C2C2C;
   text-shadow: 4px 4px 2px #2C2C2C;
   font-size: 40pt;
   text-align: center;
-  padding:15px;
+  padding: 5%;
 }
 
 body {
+  line-height: 28px;
   font-family: sans-serif;
   background-color: #FFFFFF
-
 }
+
 h1 {
   font-size: 20pt;
+  text-align: center;
   background-color: #55cdfc;
   border-radius: 10px;
-  border: 15px  #55cdfc;
   margin: 15px;
-  padding:15px;
-
+  padding: 3% 1%
 }
+
 h2 {
   font-size: 15pt;
+  text-align: center;
   background-color: #f7a8b8;
   border-radius: 10px;
-  border: 15px  #55cdfc;
   margin: 15px;
-  padding:15px;
+  padding: 3% 1%
+}
+
+h3 {
+  font-size: 15pt;
+  text-align: center;
+  background-color: #55cdfc;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 3% 1%
+}
+
+h4 {
+  font-size: 15pt;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #2C2C2C;
+  border-radius: 10px;
+  margin: 15px;
+  padding: 3% 1%
+}
+
+
+ul {
+  font-size: 15pt;
+  margin: 15px;
+  padding: 15px;
+  text-align: left;
+  list-style-type: circle
+}
+
+ol {
+  line-height: 28px;
+  font-size: 15pt;
+  margin: 15px;
+  padding: 5%;
+  text-align: left;
+  color: #9C59D1;
+  list-style-type: decimal
+}
+
+a {
+  color: #FCF434;
 }
