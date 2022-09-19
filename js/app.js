@@ -1,13 +1,10 @@
 'use strict';
 let score = 0;
 
-function askName(){
-  let visitorName = prompt('What\'s your name?');
-  return visitorName;
-}
-let visitorName = askName();
 
 
+
+let visitorName = '';
 let guessednum = 0;
 let flavorguess = 'NONE';
 let correct = false;
@@ -21,8 +18,33 @@ const flavors = ['peanutbutter', 'mintchocolatechip', 'mint', 'chocolatechip', '
 
 
 
-alert('Welcome ' + visitorName + '! I\'m going to give you some yes or no questions, try and guess these facts   about me!');
-function questionOne(){
+
+
+
+visitorName = askName();
+
+alert('Welcome ' + visitorName + '! I\'m going to give you some yes or no questions, try and guess these facts about me!');
+
+
+questionOne();
+questionTwo();
+questionThree();
+questionFour();
+questionFive();
+questionSix();
+questionSeven();
+
+alert('Thank you for playing, ' + visitorName + '. Maybe you feel that you understand me just that little bit better.\n\nBy the way, your score was ' + score + ', out of 7.');
+
+
+
+function askName() {
+  let visitorName = prompt('What\'s your name?');
+  return visitorName;
+}
+
+
+function questionOne() {
   let resp1 = prompt('Is Casey\'s favorite breakfast food Hashbrowns?');
 
   if (resp1.toUpperCase().charAt(0) === 'Y') {
@@ -35,9 +57,9 @@ function questionOne(){
     alert('That\'s incorrect! Casey loooves hashbrowns and could eat them every single day.');
   }
 }
-questionOne();
 
-function questionTwo(){
+
+function questionTwo() {
   let resp2 = prompt('Did Casey develop an interest in computers AFTER the age of 12?');
 
   if (resp2.toUpperCase().charAt(0) === 'N') {
@@ -52,10 +74,9 @@ function questionTwo(){
     alert('That\'s incorrect! Casey grew up around computers, and they have fond memories of games on the original Macintosh such as Cosmic Osmo!');
   }
 }
-questionTwo();
 
 
-function questionThree(){
+function questionThree() {
   let resp3 = prompt('Has Casey published and released to the public any videogames of their own?');
 
   if (resp3.toUpperCase().charAt(0) === 'Y') {
@@ -70,9 +91,8 @@ function questionThree(){
   }
 }
 
-questionThree();
 
-function questionFour(){
+function questionFour() {
   let resp4 = prompt('Does Casey value experimental games that ultimately fail to achieve their potential, higher than polished games that do an established concept well?');
 
   if (resp4.toUpperCase().charAt(0) === 'Y') {
@@ -86,10 +106,9 @@ function questionFour(){
     alert('That is incorrect! Casey is far more interested in weird and experimental games that try something new, even if the final result is something that is entirely not fun. Yume Nikki is a favorite, as it uses a tool for making RPGs, and instead uses it to make an objectiveless, surreal exploration game.');
   }
 }
-questionFour();
 
 
-function questionFive(){
+function questionFive() {
   let resp5 = prompt('Does Casey consider themselves to be an individual human?');
 
   if (resp5.toUpperCase().charAt(0) === 'N') {
@@ -103,10 +122,9 @@ function questionFive(){
     alert('That is, oddly enough, incorrect! While Casey considers themselves the "main person" within their body, smaller other personalities sometimes chime in to provide secondary opinions. These others have their own creeds and opinions, and even preferred names, seperate from Casey\'s. Brains are wild.');
   }
 }
-questionFive();
 
 
-function questionSix(){
+function questionSix() {
   alert('Guess my number below 11, and above 0! You have 4 tries. Ready?');
 
   guessednum = prompt('Go on, guess!');
@@ -119,7 +137,7 @@ function questionSix(){
       alert('you got it in ' + numguesses + '!');
       numguesses++;
       score++;
-      correct = true;
+      break;
     }
 
     if (numguesses > 3) {
@@ -142,40 +160,36 @@ function questionSix(){
 
   }
 }
-questionSix();
 
 
-correct = false; //reset the Correct bool that way the next one isn't skipped.
-
-
-function questionSeven(){
+function questionSeven() {
+  correct = false;
   alert('Try and guess one of my favorite ice cream flavors! You have 6 tries. Ready?');
 
 
   while (flavguesses < 6 && !correct) {
 
-  flavorguess = prompt('guess a flavor!');
-  console.log(`adjusted guessed flavor>>${flavorguess.toLowerCase().replace(/\s+/g, '')}`)
+    flavorguess = prompt('guess a flavor!');
+    for (let i = 0; i < flavors.length; i++) {
+      console.log(`array flavor>> ${flavors[i]}`);
+      if (flavors[i] === flavorguess.toLowerCase().replace(/\s+/g, '')) {
+        alert('that\'s right! You got one!');
+        score++;
+        correct = true;
+        break;
+      }
 
-  for (let i = 0; i < flavors.length; i++) {
-    console.log(`array flavor>> ${flavors[i]}`);
-    if (flavors[i] === flavorguess.toLowerCase().replace(/\s+/g, '')) {
-      alert('that\'s right! You got one!');
-      correct = true;
-      score++;
+
+
     }
-
-  }
-
-  if (!correct) {
-    alert('nope, keep guessing!');
-    flavguesses++;
-  }
-
+    if (!correct) {
+      alert('nope, that\'s not one of them!');
+      flavguesses++;
+    }
   }
 
 
-  let flavorlist = " ";
+  let flavorlist = '';
 
   for (let i = 0; i < flavors.length; i++) {
 
@@ -185,9 +199,5 @@ function questionSeven(){
     console.log(flavorlist);
   }
 
-  alert('The possible correct answers were' + flavorlist + '.');
+  alert('The possible correct answers were ' + flavorlist + '.');
 }
-questionSeven();
-
-
-alert('Thank you for playing, ' + visitorName + '. Maybe you feel that you understand me just that little bit better.\n\nBy the way, your score was ' + score + '.');
